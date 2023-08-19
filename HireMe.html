@@ -64,6 +64,25 @@
         h1{
             color: #f1ecec;
         }
+/* Clock Css */
+        #Analog {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        #Analog:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+        
         
     </style>
 </head>
@@ -80,7 +99,13 @@
         </form>
         <div id="success-message" class="success-msg"></div>
     </div>
-z
+    
+<!--     Clock section -->
+
+        <div>
+       <a href="Series 4.html"><button id="Analog" class="bttn">Time</button></a>
+        </div>
+
     <script>
         // JavaScript code
         const form = document.getElementById('login-form');
