@@ -145,6 +145,38 @@ nav.sticky .menu-btn {
     font-family: "Ubuntu", sans-serif;
 }
 
+.animated {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 60px;
+    width: 0;
+    border-right: 3px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.text-one {
+    animation: type 2s steps(6) forwards 0.1ms; /* Delay of 0.5s */
+}
+
+.text-two {
+    animation: type 2s steps(22) forwards 1s; /* Delay of 3s */
+}
+
+.text-three {
+    animation: type 2s steps(22) forwards 3s; /* Delay of 5.5s */
+}
+
+.text-four {
+    animation: type 2s steps(22) forwards 4.7s; /* Delay of 8s */
+}
+
+@keyframes type {
+    to {
+        width: 18ch;
+    }
+}
+
+
 .home .home-content {
     width: 90%;
     height: 100%;
