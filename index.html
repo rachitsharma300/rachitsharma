@@ -1,166 +1,283 @@
 <!DOCTYPE html>
-<!-- Designined by Rachit Sharma -->
+<!-- Enhanced by Rachit Sharma -->
 <html lang="en" dir="ltr">
-
 <head>
     <meta charset="UTF-8">
-    <title> rachitsharma300</title>
+    <title>Rachit Sharma | Java Full Stack Developer</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
-    <!-- Move to up button -->
-    <div class="scroll-button">
-        <a href="#home"><i class="fas fa-arrow-up"></i></a>
-    </div>
-    <!-- navgaition menu -->
+    <!-- Navigation -->
     <nav>
         <div class="navbar">
-            <div class="logo"><a href="#">Portfolio.</a></div>
+            <div class="logo"><a href="#">Rachit Sharma</a></div>
             <ul class="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="HireMe.html" target="blank">Contact</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <div class="cancel-btn">
                     <i class="fas fa-times"></i>
                 </div>
             </ul>
             <div class="media-icons">
-                <a href="https://twitter.com/rachitsharma300"target="blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/rachitsharma300/?hl=en"target="blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/rachitsharma300"target="blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/rachitsharma300/rachitsharma300.git"target="blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/rachitsharma300" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/rachitsharma300/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/rachitsharma300" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/rachitsharma300" target="_blank"><i class="fab fa-github"></i></a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
-        </div>
-        <div class="menu-btn">
-            <i class="fas fa-bars"></i>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </nav>
 
-    <!-- Home Section Start -->
+    <!-- Home Section -->
     <section class="home" id="home">
         <div class="home-content">
-            <div class="text">
-                <div class="text-one animated">Hello,</div>
-                <div class="text-two animated">I'm Rachit Sharma</div>
-                <div class="text-three animated">Java Full Stack Deve... </div>
-                <div class="text-four animated">From Bihar</div>
+            <div class="animated-text">
+                <div class="text-one">Hello,</div>
+                <div class="text-two">I'm Rachit Sharma</div>
+                <div class="text-three">Java Full Stack Developer</div>
+                <div class="text-four">Building digital solutions that matter</div>
             </div>
-<!--             <div class="button">
-                <a href="HireMe.html"> <button><a href="HireMe.html">Hire Me</button></a> -->
+            <div class="home-buttons">
+                <a href="#contact" class="btn">Hire Me</a>
+                <a href="CV.pdf" target="_blank" class="btn btn-secondary">Download CV</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section Start -->
+    <!-- About Section -->
     <section class="about" id="about">
-        <div class="content">
-            <div class="title"><span>About Me</span></div>
-            <div class="about-details">
-                <div class="left">
-                    <img src="about.gif" alt="">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="about.gif" alt="Rachit Sharma">
                 </div>
-                <div class="right">
-<!--                     <div class="topic"></div> -->
-Work-In... <Progress></Progress></p>
-                    <div class="button">
-                        <a href="CV.pdf"target="blank"><button>Download CV</button></a>
-                            <a href="certificate.html"target="blank"><button>Certificates</button></a>
-                                <a href="https://github.com/rachitsharma300/"target="blank"><button>Project</button></a>
-                            </div>
-
-                        </div>
-
+                <div class="about-text">
+                    <h3>Java Full Stack Developer</h3>
+                    <p>I am a passionate Java Full Stack Developer with expertise in building robust and scalable web applications. With a strong foundation in both frontend and backend technologies, I create seamless user experiences combined with efficient server-side functionality.</p>
+                    <p>My journey in web development started 3 years ago, and since then I've worked on various projects that have honed my skills in Java, Spring Boot, React, and database management. I'm committed to writing clean, maintainable code and following best practices.</p>
+                    <p>When I'm not coding, you can find me contributing to open-source projects, learning new technologies, or sharing my knowledge with the developer community.</p>
+                    <div class="skills-tags">
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>React</span>
+                        <span>MySQL</span>
+                        <span>JavaScript</span>
+                        <span>HTML/CSS</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- My Skill Section Start -->
-    <!-- Section Tag and Other Div will same where we need to put same CSS -->
-    <section class="skills" id="skills">
-        <div class="content">
-            <div class="title"><span>My Skills</span></div>
-            <div class="skills-details">
-                <div class="text">
-                    <div class="topic">Skills Reflects Our Knowledge</div>
-                    
-<li><b>Java:</b></li>
-<p>work-In... <progress></progress></p>
-                    
-                    
-<li><b>Python:</b></li>
-<p>Work-In... <Progress></Progress></p>
-
-
-                    
-<li><b>SQL:</b></li>
-<p>Work-In... <Progress></Progress></p>
-                    
-                    
-                    
-<li><b>Linux:</b></li>
-<p>Work-In... <Progress></Progress></p>                          
-                
-                
-<li><b>Networking:</b></li>Work-In... <Progress></Progress></p>
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skills-info">
+                    <h3>Technical Proficiency</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Java</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-percentage" data-percent="90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Spring Boot</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-percentage" data-percent="85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>React</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-percentage" data-percent="80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>MySQL</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-percentage" data-percent="85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-percentage" data-percent="85%"></div>
+                        </div>
+                    </div>
                 </div>
-                  <div class="boxes">
-                    <div class="box">
-                        <div class="topic">HTML</div>
-                        <div class="per">80%</div>
+                <div class="skills-cards">
+                    <div class="skill-card">
+                        <i class="fas fa-server"></i>
+                        <h4>Backend Development</h4>
+                        <p>Building robust server-side applications using Java, Spring Boot, and microservices architecture.</p>
                     </div>
-
-
-                    <div class="box">
-                        <div class="topic">CSS</div>
-                        <div class="per">60%</div>
+                    <div class="skill-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Frontend Development</h4>
+                        <p>Creating responsive and interactive UIs with React, JavaScript, HTML5, and CSS3.</p>
                     </div>
-
-
-                    <div class="box">
-                        <div class="topic">JavScript</div>
-                        <div class="per">50%</div>
+                    <div class="skill-card">
+                        <i class="fas fa-database"></i>
+                        <h4>Database Management</h4>
+                        <p>Designing and optimizing relational databases with MySQL and PostgreSQL.</p>
                     </div>
-
-                    <div class="box">
-                        <div class="topic">Python</div>
-                        <div class="per">60%</div>
+                    <div class="skill-card">
+                        <i class="fas fa-code-branch"></i>
+                        <h4>Version Control</h4>
+                        <p>Experienced with Git and GitHub for collaborative development workflows.</p>
                     </div>
-
-                    <div class="box">
-                        <div class="topic">Java</div>
-                        <div class="per">80%</div>
-                    </div>
-
-                    <div class="box">
-                        <div class="topic">SQL</div>
-                        <div class="per">70%</div>
-
-
-                           </div>
-                       </div>
-                  </div>
-               </div>
-           </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/ecommerce.jpg" alt="E-Commerce Platform">
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-featured online store with product catalog, shopping cart, and payment integration built with Spring Boot and React.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/rachitsharma300/ecommerce-platform" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://ecommerce-demo.rachitsharma.com" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/task-manager.jpg" alt="Task Management App">
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Management App</h3>
+                        <p>A productivity application for managing tasks with drag-and-drop interface, built with Java and React.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/rachitsharma300/task-manager" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://tasks.rachitsharma.com" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/social-dashboard.jpg" alt="Social Media Dashboard">
+                    </div>
+                    <div class="project-info">
+                        <h3>Social Media Dashboard</h3>
+                        <p>Analytics dashboard for social media metrics visualization using Spring Boot and Chart.js.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/rachitsharma300/social-dashboard" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://dashboard.rachitsharma.com" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>rachitsharma300</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <h4>Phone</h4>
+                        <p>+91 987-------</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Location</h4>
+                        <p>Bihar, India</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer Section Start -->
+    <!-- Footer -->
     <footer>
-        <div class="text">
-            <span>Created By <a href="rachitsharma300">rachitsharma300</a> | &#169; 2022 All Rights Reserved</span>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://twitter.com/rachitsharma300" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/rachitsharma300/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/rachitsharma300" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/rachitsharma300" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; <span id="currentYear"></span> Rachit Sharma. All Rights Reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
     <script src="script.js"></script>
 </body>
-
 </html>

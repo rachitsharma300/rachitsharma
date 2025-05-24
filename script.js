@@ -1,44 +1,114 @@
-// Sticky Navigation Menu JS Code
-let nav = document.querySelector("nav");
-let scrollBtn = document.querySelector(".scroll-button a");
-console.log(scrollBtn);
-let val;
-window.onscroll = function() {
-    if (document.documentElement.scrollTop > 20) {
-        nav.classList.add("sticky");
-        scrollBtn.style.display = "block";
-    } else {
-        nav.classList.remove("sticky");
-        scrollBtn.style.display = "none";
-    }
-};
+// DOM Elements
+const nav = document.querySelector('nav');
+const menuBtn = document.querySelector('.menu-btn');
+const cancelBtn = document.querySelector('.cancel-btn');
+const navbar = document.querySelector('.navbar');
+const menu = document.querySelector('.menu');
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+const icon = themeToggle.querySelector('i');
+const scrollTop = document.querySelector('.scroll-top');
+const skillBars = document.querySelectorAll('.skill-percentage');
+const contactForm = document.getElementById('contactForm');
+const currentYear = document.getElementById('currentYear');
 
-// Side NavIgation Menu JS Code
-let body = document.querySelector("body");
-let navBar = document.querySelector(".navbar");
-let menuBtn = document.querySelector(".menu-btn");
-let cancelBtn = document.querySelector(".cancel-btn");
+// Sticky Navigation
+window.addEventListener('scroll', function() {
+    nav.classList.toggle('sticky', window.scrollY > 0);
+    scrollTop.classList.toggle('active', window.scrollY > 500);
+});
+
+// Mobile Menu Toggle
 menuBtn.onclick = function() {
-    navBar.classList.add("active");
-    menuBtn.style.opacity = "0";
-    menuBtn.style.pointerEvents = "none";
-    body.style.overflow = "hidden";
-    scrollBtn.style.pointerEvents = "none";
-};
-cancelBtn.onclick = function() {
-    navBar.classList.remove("active");
-    menuBtn.style.opacity = "1";
-    menuBtn.style.pointerEvents = "auto";
-    body.style.overflow = "auto";
-    scrollBtn.style.pointerEvents = "auto";
-};
+    menu.classList.add('active');
+    menuBtn.classList.add('hide');
+}
 
-// Side Navigation Bar Close While We Click On Navigation Links
-let navLinks = document.querySelectorAll(".menu li a");
-for (var i = 0; i < navLinks.length; i++) {
-    navLinks[i].addEventListener("click", function() {
-        navBar.classList.remove("active");
-        menuBtn.style.opacity = "1";
-        menuBtn.style.pointerEvents = "auto";
+cancelBtn.onclick = function() {
+    menu.classList.remove('active');
+    menuBtn.classList.remove('hide');
+}
+
+// Close menu when clicking on a link
+const navLinks = document.querySelectorAll('.menu li a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        menu.classList.remove('active');
+        menuBtn.classList.remove('hide');
+    });
+});
+
+// Theme Toggle
+// Check for saved user preference or use preferred color scheme
+const currentTheme = localStorage.getItem('theme') || 
+                    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+if (currentTheme === 'dark') {
+    body.classList.add('dark-mode');
+    icon.classList.replace('fa-moon', 'fa-sun');
+}
+
+themeToggle.addEventListener('click', function() {
+    body.classList.toggle('dark-mode');
+    
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        icon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+        localStorage.setItem('theme', 'light');
+        icon.classList.replace('fa-sun', 'fa-moon');
+    }
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Scroll to top functionality
+scrollTop.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Animate skill bars when they come into view
+function animateSkillBars() {
+    skillBars.forEach(bar => {
+        const rect = bar.getBoundingClientRect();
+        if (rect.top <= window.innerHeight - 100) {
+            const percent = bar.getAttribute('data-percent');
+            bar.style.width = percent;
+        }
     });
 }
+
+// Run once on page load
+animateSkillBars();
+
+// Run on scroll
+window.addEventListener('scroll', animateSkillBars);
+
+// Form submission
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your message! I will get back to you soon.');
+    this.reset();
+});
+
+// Set current year in footer
+currentYear.textContent = new Date().getFullYear();
