@@ -112,3 +112,35 @@ contactForm.addEventListener('submit', function(e) {
 
 // Set current year in footer
 currentYear.textContent = new Date().getFullYear();
+
+// GitHub Repository Fetching
+async function fetchGitHubRepo(repoName, elementId) {
+    try {
+        const response = await fetch(`https://api.github.com/repos/rachitsharma300/${repoName}`);
+        const data = await response.json();
+        
+        const repoCard = document.getElementById(elementId);
+        if (repoCard && data.name) {
+            repoCard.querySelector('h3').textContent = data.name;
+            repoCard.querySelector('.repo-description').textContent = data.description || 'No description provided';
+            repoCard.querySelector('.stars .count').textContent = data.stargazers_count;
+            repoCard.querySelector('.forks .count').textContent = data.forks_count;
+            repoCard.querySelector('.updated .date').textContent = new Date(data.updated_at).toLocaleDateString();
+            repoCard.querySelector('.repo-link').href = data.html_url;
+        }
+    } catch (error) {
+        console.error('Error fetching GitHub repo:', error);
+        const repoCard = document.getElementById(elementId);
+        if (repoCard) {
+            repoCard.querySelector('h3').textContent = 'Java Full Stack Learning';
+            repoCard.querySelector('.repo-description').textContent = 'My Java full stack learning journey and projects';
+            repoCard.querySelector('.repo-link').href = 'https://github.com/rachitsharma300/java-full-stack-learning';
+        }
+    }
+}
+
+// Call this function when page loads
+window.addEventListener('load', () => {
+    fetchGitHubRepo('java-full-stack-learning', 'java-full-stack-learning-repo');
+    // Add more calls for additional repositories if needed
+});
