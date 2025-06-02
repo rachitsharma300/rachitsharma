@@ -825,3 +825,32 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+.github-stats-section {
+  padding: 50px 20px;
+  background-color: #0d1117; /* GitHub dark bg feel */
+  color: #fff;
+  text-align: center;
+}
+
+.github-stats-section .section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #58a6ff;
+}
+
+.github-stats-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.github-stats-cards .card img {
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
