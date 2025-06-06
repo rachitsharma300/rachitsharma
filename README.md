@@ -44,3 +44,37 @@ Check out the source code on GitHub:
 - JavaScript (Vanilla)  
 
 ---
+
+## 🔗 Useful Links
+
+- [My GitHub](https://github.com/your-github-username)  
+- [My Portfolio](https://your-github-username.github.io/your-repo-name)  
+
+---
+
+### Sample Dark/Light Toggle Code Snippet (for your reference)
+
+```html
+<button id="theme-toggle">Toggle Theme</button>
+
+<script>
+  const toggleButton = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  toggleButton.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+  });
+</script>
+
+<style>
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: white;
+    color: black;
+  }
+
+  body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+</style>
