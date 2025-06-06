@@ -1,2 +1,12 @@
-# rachitsharma
-My Website
+# 👋 Hey, I'm ParsuRam
+
+Welcome to my portfolio! This project showcases my skills in **HTML, CSS, and JavaScript** with a cool dark/light mode toggle and direct links to my GitHub repos.
+
+---
+
+## 🌐 Live Demo
+
+Check out the live version of my portfolio hosted on GitHub Pages:
+
+[👉 Click here to see my portfolio](https://rachitsharma300.github.io/rachitsharma/)
+
