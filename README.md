@@ -1,4 +1,4 @@
-# 👋 Hey, I'm ParsuRam
+# 👋 Hey, I'm Rachit
 
 Welcome to my portfolio! This project showcases my skills in **HTML, CSS, and JavaScript** with a cool dark/light mode toggle and direct links to my GitHub repos.
 
