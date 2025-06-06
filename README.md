@@ -29,3 +29,10 @@ Check out the live version of my portfolio hosted on GitHub Pages:
 - Clean UI with smooth animations  
 
 ---
+
+## 📁 GitHub Repo
+
+Check out the source code on GitHub:  
+[https://github.com/your-github-username/your-repo-name](https://github.com/rachitsharma300/rachitsharma300)
+
+---
