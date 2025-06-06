@@ -20,3 +20,12 @@ Check out the live version of my portfolio hosted on GitHub Pages:
 - Clean UI with smooth animations  
 
 ---
+
+## 🛠 Features
+
+- Responsive design with modern layout  
+- Dark & Light theme toggle using JavaScript  
+- GitHub repo link integration  
+- Clean UI with smooth animations  
+
+---
