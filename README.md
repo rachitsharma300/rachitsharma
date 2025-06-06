@@ -10,3 +10,13 @@ Check out the live version of my portfolio hosted on GitHub Pages:
 
 [👉 Click here to see my portfolio](https://rachitsharma300.github.io/rachitsharma/)
 
+---
+
+## 🛠 Features
+
+- Responsive design with modern layout  
+- Dark & Light theme toggle using JavaScript  
+- GitHub repo link integration  
+- Clean UI with smooth animations  
+
+---
